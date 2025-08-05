@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-6 mt-5" *ngFor="let resultadosNoticias of listNoticiasHijo">
+        <img [src]="resultadosNoticias.urlToImage" class="card-img-top " alt="... ">
+        <div class="card-body ">
+            <h2 class="card-title titulo_noticias">{{ resultadosNoticias.title }}</h2>
+            <p class="card-text"> Autor: {{ resultadosNoticias.author }}</p>
+            <p class="card-text">Fecha: {{ resultadosNoticias.publishedAt }}</p>
+            <p class=" card-text ">{{ resultadosNoticias.description }}</p>
+            <p class="card-text "><small class="text-muted ">Last updated 3 mins ago</small></p>
+            <a [href]="resultadosNoticias.url " class="btn btn-primary " target="_blank ">Ir a la Nota</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="jumbotron mt-5">
+    <h1 class="titulo_noticias">Filtra noticias por pais y categoria</h1>
+
+    <div class="row mt-5">
+        <div class="col-mg-8 col-offset-2">
+
+            <form>
+                <div class="form-group">
+                    <select name="sports" [(ngModel)]="categoriaSeleccionada" class="form-select">
+                      <option [value]="categoria.value" *ngFor="let categoria of datosCategoria">{{ categoria.nombre }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group mt-3">
+                    <select name="pais" [(ngModel)]="paisSeleccionado" class="form-select">
+                      <option [value]="paises.value" *ngFor="let paises of datosPais">{{ paises.nombre }}</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn btn-primary boton_buscar" (click)="verNoticia()" >Buscar Noticia</button>
+
+            </form>
+
+
+        </div>
+    </div>
+
+</div>
